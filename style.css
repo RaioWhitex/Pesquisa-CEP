@@ -1,0 +1,66 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* Barra de topo */
+.topo {
+  background: #e57373;
+  color: #ffffff;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.titulo {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #333;
+  margin: 10px 0 30px;
+}
+
+/* Campo com label flutuante */
+.grupo {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.campo {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  background: transparent;
+  outline: none;
+}
+.campo:focus {
+  border-bottom-color: #e57373;
+}
+
+.grupo label {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: #999;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Sobe o label quando o campo está focado ou preenchido */
+.campo:focus + label,
+.campo:not(:placeholder-shown) + label {
+  top: -14px;
+  font-size: 0.78rem;
+  color: #888;
+}
